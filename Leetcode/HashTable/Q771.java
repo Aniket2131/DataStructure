@@ -1,4 +1,3 @@
-package Leetcode.HashTable;
 
 import java.util.HashMap;
 
