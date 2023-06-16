@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Q2363<E> {
+public class Q2363 {
     public static void main(String[] args) {
         int[][] items1 = {
                 { 1, 1 },
