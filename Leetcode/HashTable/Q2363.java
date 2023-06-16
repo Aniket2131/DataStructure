@@ -2,8 +2,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import javax.swing.plaf.nimbus.State;
-
 public class Q2363<E> {
     public static void main(String[] args) {
         int[][] items1 = {
