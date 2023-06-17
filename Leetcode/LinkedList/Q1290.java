@@ -39,9 +39,6 @@ public class Q1290 {
     }
 
     public void insertFirst(int val) {
-        // if (tail == null) {
-        // tail = head;
-        // }
 
         ListNode node = new ListNode(val);
         node.next = head;
