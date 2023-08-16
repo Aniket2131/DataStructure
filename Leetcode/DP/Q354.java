@@ -8,17 +8,16 @@ public class Q354{
     }
 
     public static int maxEnvelopes(int[][] envelopes) {
-        Arrays.sort(envelopes, (a, b) -> a[0] != b[0] ? a[0] - b[0]: a[1] - b[1]);
+        Arrays.sort(envelopes, (a, b) -> a[0] == b[0]? b[1] - a[1]: a[0] - b[0]);
         int n = envelopes.length;
-        int hei = envelopes[0][1];
-        int wid = envelopes[0][0];
-        int ans = 1;
-        for(int i = 1; n > i; i++){
-            if(envelopes[i][0] > wid & envelopes[i][1] > hei){
-                ans++;
-                wid = envelopes[i][0];
-                hei = envelopes[i][1];
-            }
+        int[] dp = new int[n];
+        int ans = 0;
+        for(int[] el : envelopes){
+            int h = el[1];
+            int l = Arrays.binarySearch(dp, 0, ans, h);
+            if(0 > l) l = - l - 1;
+            if(l == ans) ans++;
+            dp[l] = h;
         }
         return ans;
     }
