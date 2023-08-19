@@ -1,6 +1,6 @@
 public class Q91 {
     public static void main(String[] args) {
-        String s = "27";
+        String s = "90";
         System.out.println(numDecodings(s));
     }
 
