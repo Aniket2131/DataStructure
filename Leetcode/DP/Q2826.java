@@ -1,24 +1,30 @@
+import java.util.Arrays;
 import java.util.List;
 
 public class Q2826{
     public static void main(String[] args) {
-        int[] nums = {2,1,3,2,1};
-        System.out.println(minimumOperations(nums));
+    
     }
 
-    public static int minimumOperations(int[] nums) {
-        return helper(nums, 0);
+    int[][] dp;
+    public int minimumOperations(List<Integer> nums) {
+        dp = new int[nums.size() + 1][4];
+        for(int[] r : dp){
+            Arrays.fill(r, -1);
+        }
+        return helper(nums, 0, 0);
     }
 
-    public static int helper(int[] nums, int ind){
-        if(ind == nums.length) return 0;
+    public int helper(List<Integer> nums, int ind, int prev){
+        if(ind == nums.size()) return 0;
+        if(dp[ind][prev] != -1) return dp[ind][prev];
+        int cur = nums.get(ind);
+        int ans = Integer.MAX_VALUE;
+        for(int i = prev; 3 >= i; i++){
+            if(i == cur) ans = Math.min(ans, helper(nums, ind + 1, i));
+            ans = Math.min(ans, 1 + helper(nums, ind + 1, i));
+        }
 
-        int a = (nums[ind] == 1 ? 0: 1) + helper(nums, ind+1);
-
-        int b = (nums[ind] == 2 ? 0: 1) + helper(nums, ind+1);
-
-        int c = (nums[ind] == 3 ? 0: 1) + helper(nums, ind+1);
-
-        return Math.min(a, Math.min(b,c));
+        return dp[ind][prev] = ans;
     }
 }
