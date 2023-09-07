@@ -1,4 +1,4 @@
-public class MostVotingAlgo {
+public class MooreVotingAlgo {
     public static void main(String[] args) {
         
     }
