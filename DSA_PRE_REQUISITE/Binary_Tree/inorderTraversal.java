@@ -1,6 +1,3 @@
-
-
-
 public class inorderTraversal {
 
     public class TreeNode {
@@ -14,11 +11,6 @@ public class inorderTraversal {
           this.left = left;
           this.right = right;
       }
-  }
-
-
-  public static void main(String[] args) {
-    
   }
 
 ///////////////   itterative
