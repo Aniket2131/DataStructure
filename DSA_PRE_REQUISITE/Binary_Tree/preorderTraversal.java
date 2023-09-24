@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
 
-import javax.swing.tree.TreeNode;
 
 public class preorderTraversal {
 
@@ -20,6 +17,25 @@ public class preorderTraversal {
     public static void main(String[] args) {
         
     }
+
+    //////// Itterative
+    //     public List<Integer> preorderTraversal(TreeNode root) {
+    //         List<Integer> ans = new ArrayList<>();
+    //         Stack<TreeNode> s = new Stack<>();
+    //         s.push(root);
+    //         while(!s.isEmpty()){
+    //             root = s.pop();
+    //             ans.add(root.val);
+    //             if(root.right != null){
+    //                 s.push(root.right);
+    //             }
+    //             if(root.left != null){
+    //                 s.push(root.left);
+    //             }
+    //         }
+    //         return ans;
+    // }
+
 
 
     /////////// recursive
