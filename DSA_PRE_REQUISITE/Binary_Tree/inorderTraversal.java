@@ -21,13 +21,15 @@ public class inorderTraversal {
 //         TreeNode cur = root; 
 //         // s.push(cur);
 //         while(!s.isEmpty() || cur != null){
-//             while(cur != null){
+//             if(cur != null){
 //                 s.push(cur);
 //                 cur = cur.left;
 //             }
-//             cur = s.pop();
-//             ans.add(cur.val);
-//             cur = cur.right;
+//             else{
+//                  cur = s.pop();
+//                  ans.add(cur.val);
+//                  cur = cur.right;
+//              }    
 //         }
 //         return ans;
 //     }
