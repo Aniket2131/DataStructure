@@ -28,7 +28,7 @@ public class Q103{
 
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
       List<List<Integer>> ans = new ArrayList<>();
-	    Queue<TreeNode> q = new LinkedList<>();
+	    Queue<TreeNode> q = new LinkedList<>(); 
 			if(root == null) return ans;
 	    q.add(root);
 	    boolean rev = false;
