@@ -27,7 +27,7 @@ public class Q1319 {
 
         else {
             parent[x_parent] = y_parent;
-            rank[x_parent]++;
+            rank[y_parent]++;
         }
     }
 
