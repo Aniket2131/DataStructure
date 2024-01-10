@@ -62,6 +62,7 @@ public class Q2385 {
 
     public int amountOfTime(TreeNode root, int start) {
         HashMap<TreeNode, TreeNode> parent = new HashMap<>();
+        
         makeParent(root, parent);
 
         root = reachTrg(root, start);
